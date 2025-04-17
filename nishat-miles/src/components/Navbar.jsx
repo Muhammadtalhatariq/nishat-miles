@@ -36,7 +36,7 @@ const Navbar = () => {
           <ul className="hidden md:flex list-none gap-5">
             {nevItems.map((item) => (
               <li
-                className="hover:text-[#D9D9D9] font-medium py-6 cursor-pointer"
+                className="hover:text-[#D9D9D9] font-medium py-4 cursor-pointer"
                 key={item.path}
               >
                 <a to={item.path}>{item.name}</a>

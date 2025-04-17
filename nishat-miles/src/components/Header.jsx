@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { TfiSearch } from "react-icons/tfi";
 import { CiUser } from "react-icons/ci";
-import { TbTruckDelivery } from "react-icons/tb";
+import { CiDeliveryTruck } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
 import TopHeader from './TopHeader';
 import Navbar from './Navbar';
@@ -38,6 +38,24 @@ const nevItems = [
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [stick, setstick] = useState(false);
+
+    useEffect(() => {
+      const handleScrool = () => {
+        if (window.scrollY > 0) {
+          setstick(true);
+        } else {
+          setstick(false);
+        }
+      };
+      window.addEventListener("scroll", handleScrool);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScrool);
+      };
+    }, []);
+    
+
     const handleToggle = () => {
         setIsOpen(true);
     };
@@ -50,17 +68,17 @@ const Header = () => {
 
             <TopHeader />
             <div>
-                <div className='flex items-center justify-between p-4 '>
+                <div className={` flex items-center justify-between p-4 z-50 ${stick ? "fixed top-0" : "" } bg-white w-full `}>
                     {/* mobile view  */}
                     <div className='mbl-nav relative'>
                         <HiOutlineMenuAlt1 onClick={handleToggle} size={30} className='text-black text-2xl md:hidden' />
                         {isOpen && (
-                            <div className='w-80 absolute -top-20 -left-4 z-50 flex flex-col items-center justify-center ease-in-out duration-1000'>
+                            <div className='w-80 absolute fixed bg-white -top-24 -left-0 bottom-0 z-50 flex flex-col items-center justify-center'>
                                 <div className='flex items-center justify-between w-full'>
                                     <div className='bg-[#CCCCCC] w-full p-3'>
                                         <h2 className='font-semibold text-xl text-center'>MENU</h2>
                                     </div>
-                                    <div className='absolute -top-0 -right-10 bg-black p-[14px]'>
+                                    <div className='absolute fixed -top-0 right-2 bg-black p-[14px]'>
                                         <IoCloseOutline className='text-white ' onClick={handleClose} size={25} />
                                     </div>
                                 </div>
@@ -105,7 +123,7 @@ const Header = () => {
                     <div className='icons flex items-center justify-between md:px-6 px-2 gap-2'>
                         <TfiSearch className='text-black  hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
                         <CiUser className='text-black hidden md:flex hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
-                        <TbTruckDelivery className='text-black  hidden md:flex hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
+                        <CiDeliveryTruck className='text-black  hidden md:flex hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
                         <div className='relative'>
                             <span className='absolute -top-1 -right-2 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs'>0</span>
                             <SlBasket className='text-black hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
@@ -113,8 +131,12 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='border-b border-[#D9D9D9] mx-4'></div>
+                <div>
+                    
+                </div>
+                 <Navbar />
             </div>
-            <Navbar />
+           
         </>
     )
 }
