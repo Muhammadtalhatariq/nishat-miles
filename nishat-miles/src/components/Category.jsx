@@ -11,7 +11,7 @@ const Category = () => {
           <div className='left md:w-1/2 w-full md:relative'>
             <div >
               <img className='w-full pr-1' src="/img1c.webp" alt="" />
-              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500 ' >UNSTITCHED</h2>
+              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500 cursor-pointer'>UNSTITCHED</h2>
             </div>
 
             <div className='md:absolute md:-bottom-98 hidden md:flex '>
@@ -31,11 +31,11 @@ const Category = () => {
             <div className='flex gap-1 '>
               <div>
                 <img className='h-68 w-77' src="/img2c.avif" alt="" />
-                <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500'>LUXURY</h2>
+                <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500 cursor-pointer '>LUXURY</h2>
               </div>
               <div>
                 <img className='h-68 w-77' src="/img3c.avif" alt="" />
-                <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500'>READY TO STITCH</h2>
+                <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500 cursor-pointer '>READY TO STITCH</h2>
               </div>
             </div>
             <div className='flex'>
@@ -48,11 +48,11 @@ const Category = () => {
               <div className='flex gap-1 md:hidden flex'>
                 <div>
                   <img className='h-68 w-77' src="/img5c.avif" alt="" />
-                  <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500'>MEN</h2>
+                  <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500 cursor-pointer '>MEN</h2>
                 </div>
                 <div>
                   <img className='h-68 w-79' src="/img6c.avif" alt="" />
-                  <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500'>FREEDOM TO BUY</h2>
+                  <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500 cursor-pointer '>FREEDOM TO BUY</h2>
                 </div>
               </div>
             </div>
@@ -65,11 +65,11 @@ const Category = () => {
           <div className='flex gap-1'>
             <div>
               <img className='md:h-68 w-77' src="/img7c.avif" alt="" />
-              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white hover:text-white duration-500'>FOOTWEAR</h2>
+              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white hover:text-white duration-500 cursor-pointer '>FOOTWEAR</h2>
             </div>
             <div>
               <img className='md:h-68 w-79' src="/img8c.webp" alt="" />
-              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white hover:text-white duration-500'>BAGS</h2>
+              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white hover:text-white duration-500 cursor-pointer '>BAGS</h2>
             </div>
 
           </div>
@@ -79,11 +79,11 @@ const Category = () => {
           <div className='flex gap-1'>
             <div>
               <img className='h-68 w-76' src="/img9c.webp" alt="" />
-              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white hover:text-white duration-500'>WRAPS</h2>
+              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white hover:text-white duration-500cursor-pointer '>WRAPS</h2>
             </div>
             <div>
               <img className='h-68 w-76' src="/img10c.avif" alt="" />
-              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white hover:text-white duration-500'>CO-ORDS</h2>
+              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white hover:text-white duration-500 cursor-pointer '>CO-ORDS</h2>
             </div>
           </div>
         </div>

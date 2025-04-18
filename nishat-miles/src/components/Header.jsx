@@ -70,7 +70,7 @@ const Header = () => {
 
             <TopHeader />
             <div>
-                <div className={`flex items-center md:flex-col justify-between p-2 z-80 ${stick ? "fixed top-0" : ""} bg-white w-full `}>
+                <div className={`flex items-center md:flex-col justify-between p-2 z-80 ${stick ? "fixed top-0 duration-500 ease-in" : ""} bg-white w-full `}>
                     {/* mobile view  */}
                     <div className='mbl-nav relative '>
                         <div>
@@ -141,7 +141,6 @@ const Header = () => {
                     <div className='hidden md:flex'>
                     <Navbar />
                     </div>
-                    
                 </div>
                 <div>
                     
