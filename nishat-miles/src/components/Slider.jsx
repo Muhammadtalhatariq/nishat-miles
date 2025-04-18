@@ -83,7 +83,7 @@ const Slider = () => {
             >
                 {heroItems.map((item) => (
                     <img
-                        className='bg-center object-fit h-[300px] md:h-[500px]'
+                        className='bg-center object-fit h-[500px] md:h-[500px]'
                         src={item.image}
                         key={item.id}
                         style={{
