@@ -34,7 +34,8 @@ const Slider = () => {
             <Carousel
                 additionalTransfrom={0}
                 arrows
-                autoPlaySpeed={3000}
+                autoPlay
+                autoPlaySpeed={8000}
                 centerMode={false}
                 className="z-0"
                 containerClass="container"

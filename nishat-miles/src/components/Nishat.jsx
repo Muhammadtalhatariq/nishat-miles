@@ -11,7 +11,7 @@ const nishatItems = [
         id: 1,
         image: <GrSupport size={30} />,
         title: "Track Your Order",
-        dest: "Click here to find your nearby store"
+        dest: "Click here to find your nearby"
     },
     {
         id: 2,
@@ -108,11 +108,6 @@ const Nishat = () => {
                                         </div>
                                     </div>
                                 ))}
-
-
-
-
-
                             </Carousel>
                         </div>
 
@@ -182,6 +177,7 @@ const Nishat = () => {
                                 ))}
                             </Carousel>
                         </div>
+
                     </div>
                 </div>
             </div>
