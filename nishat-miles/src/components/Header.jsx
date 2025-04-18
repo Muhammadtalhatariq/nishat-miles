@@ -41,20 +41,20 @@ const Header = () => {
     const [stick, setstick] = useState(false);
 
     useEffect(() => {
-      const handleScrool = () => {
-        if (window.scrollY > 0) {
-          setstick(true);
-        } else {
-          setstick(false);
-        }
-      };
-      window.addEventListener("scroll", handleScrool);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScrool);
-      };
+        const handleScrool = () => {
+            if (window.scrollY > 0) {
+                setstick(true);
+            } else {
+                setstick(false);
+            }
+        };
+        window.addEventListener("scroll", handleScrool);
+
+        return () => {
+            window.removeEventListener("scroll", handleScrool);
+        };
     }, []);
-    
+
 
     const handleToggle = () => {
         setIsOpen(true);
@@ -68,10 +68,13 @@ const Header = () => {
 
             <TopHeader />
             <div>
-                <div className={` flex items-center justify-between p-4 z-50 ${stick ? "fixed top-0" : "" } bg-white w-full `}>
+                <div className={`flex items-center md:flex-col justify-between  p-4 z-80 ${stick ? "fixed top-0" : ""} bg-white w-full `}>
                     {/* mobile view  */}
-                    <div className='mbl-nav relative'>
+                    <div className='mbl-nav relative '>
+                        <div>
                         <HiOutlineMenuAlt1 onClick={handleToggle} size={30} className='text-black text-2xl md:hidden' />
+                        </div>
+                       
                         {isOpen && (
                             <div className='w-80 absolute fixed bg-white -top-24 -left-0 bottom-0 z-50 flex flex-col items-center justify-center'>
                                 <div className='flex items-center justify-between w-full'>
@@ -107,8 +110,8 @@ const Header = () => {
                                     <div className='flex flex-col p-4'>
                                         <p className='py-2'>Need help?</p>
                                         <div>
-                                            <p className='flex items-center'> <span className='pr-3'> <FiPhone size={14}/></span> 042-38103311</p>
-                                            <p className='flex items-center'> <span className='pr-3'> <IoMailOutline size={14}/></span> nishatonline@nishatmills.com</p>
+                                            <p className='flex items-center'> <span className='pr-3'> <FiPhone size={14} /></span> 042-38103311</p>
+                                            <p className='flex items-center'> <span className='pr-3'> <IoMailOutline size={14} /></span> nishatonline@nishatmills.com</p>
                                         </div>
                                     </div>
 
@@ -117,26 +120,32 @@ const Header = () => {
                         )}
                     </div>
 
-                    <div className='flex w-full justify-center items-center'>
-                        <img className='md:pl-40 pl-10 md:h-10 h-10 ' src="/logo.webp" alt="" />
-                    </div>
-                    <div className='icons flex items-center justify-between md:px-6 px-2 gap-2'>
-                        <TfiSearch className='text-black  hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
-                        <CiUser className='text-black hidden md:flex hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
-                        <CiDeliveryTruck className='text-black  hidden md:flex hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
-                        <div className='relative'>
-                            <span className='absolute -top-1 -right-2 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs'>0</span>
-                            <SlBasket className='text-black hover:text-[#78909C] text-xl hover:text-2xl duration-500 ' />
+                    <div className='flex items-center justify-between w-full px-2 '>
+                        <div className='w-1/2 flex items-center justify-end'>
+                            <div className='md:pl-60 pl-10'>
+                                <img className='h-10 cursor-pointer' src="/logo.webp" alt="" />
+                            </div>
+
+                        </div>
+                        <div className='icons flex items-center justify-between md:px-3 px-3 gap-3'>
+                            <TfiSearch className='text-black  hover:text-[#78909C] text-xl hover:text-2xl duration-500 cursor-pointer' />
+                            <CiUser className='text-black hidden md:flex hover:text-[#78909C] text-xl hover:text-2xl duration-500  cursor-pointer' />
+                            <CiDeliveryTruck className='text-black  hidden md:flex hover:text-[#78909C] text-xl hover:text-2xl duration-500  cursor-pointer ' />
+                            <div className='relative'>
+                                <span className='absolute -top-1 -right-2 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs '>0</span>
+                                <SlBasket className='text-black hover:text-[#78909C] text-xl hover:text-2xl duration-500  cursor-pointer' />
+                            </div>
                         </div>
                     </div>
+                    <div className='border-b hidden md:flex w-full border-[#D9D9D9] mx-4 pt-4'></div>
+                    <Navbar />
                 </div>
-                <div className='border-b border-[#D9D9D9] mx-4'></div>
+             
                 <div>
-                    
                 </div>
-                 <Navbar />
+
             </div>
-           
+
         </>
     )
 }

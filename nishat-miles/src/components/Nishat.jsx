@@ -9,25 +9,25 @@ import { BsCashCoin } from "react-icons/bs";
 const nishatItems = [
     {
         id: 1,
-        image: <GrSupport size={20} />,
+        image: <GrSupport size={30} />,
         title: "Track Your Order",
-        dest: "Click here for quick update"
+        dest: "Click here to find your nearby store"
     },
     {
         id: 2,
-        image: <PiShippingContainerThin size={20} />,
+        image: <PiShippingContainerThin size={30} />,
         title: "Store Locator",
         dest: "Click here to find your nearby store"
     },
     {
         id: 3,
-        image: <IoHelpBuoyOutline size={20} />,
+        image: <IoHelpBuoyOutline size={30} />,
         title: "SUPPORT 24/7",
         dest: "Contact us 24 hours a day, 7 days a week"
     },
     {
         id: 4,
-        image: <BsCashCoin size={20} />,
+        image: <BsCashCoin size={30} />,
         title: "Payment Methods",
         dest: "COD, Credit Card: Visa, Master Card"
     }
@@ -37,13 +37,15 @@ const Nishat = () => {
     return (
         <>
             <div>
-                <div className='pt-8 md:h-72 '>
+                <div className='py-4  '>
                     <div className=''>
+                        {/* heading  */}
                         <div className='flex items-center justify-center gap-2'>
                             <div className=''>  <img className='size-9 pt-1' src="/instra.png" alt="" /></div>
-                            <h1 className='font-semibold text-4xl hover:text-[#FFBC70]'>#nishar</h1>
+                            <h1 className='font-semibold text-4xl hover:text-[#FFBC70]'>#nishat</h1>
                         </div>
-                        <div className=' mbl-biew md:pt-12 pt-6 pb-4 flex flex-weap md:hidden'>
+
+                        <div className='mbl-view md:pt-20 pt-6 pb-4 flex flex-weap md:hidden'>
                             <Carousel
                                 additionalTransfrom={0}
                                 arrows={false}
@@ -97,7 +99,7 @@ const Nishat = () => {
                                     <div className='p-4 '>
                                         <div className='flex items-center py-4' >
                                             <div
-                                                className='cursor-pointer rounded-full p-1 size-10'
+                                                className='rounded-full p-1 size-10'
                                             >{item.image}</div>
                                             <div >
                                                 <h2 className='font-semibold'>{item.title}</h2>
@@ -113,7 +115,7 @@ const Nishat = () => {
 
                             </Carousel>
                         </div>
-                        <div className='md:pt-12 pt-6 pb-4 md:flex hidden flex-weap'>
+                        <div className='md:pt-8 pt-6 md:flex hidden flex-weap'>
                             <Carousel
                                 additionalTransfrom={0}
                                 arrows={false}
@@ -160,24 +162,23 @@ const Nishat = () => {
                                 rtl={false}
                                 sliderClass=""
                                 slidesToSlide={1}
-
                             >
                                 {nishatItems.map((item) => (
                                     <div className='px-4'>
-                                        <div className='flex items-center ' >
+                                        <div className='flex items-center justify-center pt-8' >
                                             <div
-                                                className='cursor-pointer flex items-center rounded-full p-1 size-10'>
-                                                {item.image}
+                                                className='flex items-center justify-center size-16'>
+                                                <div className=' mb-6 '>
+                                                    {item.image}
+                                                </div>
                                             </div>
-                                            <div >
+                                            <div>
                                                 <h2 className='font-semibold'>{item.title}</h2>
-                                                <a className='text-center py-2'>{item.dest}</a>
+                                                <a className='text-center'>{item.dest}</a>
                                             </div>
                                         </div>
-
                                     </div>
                                 ))}
-
                             </Carousel>
                         </div>
                     </div>

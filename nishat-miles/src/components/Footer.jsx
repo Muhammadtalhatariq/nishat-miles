@@ -103,18 +103,18 @@ const Footer = () => {
                         <h1 className='font-bold text-xl py-2'>Information </h1>
                         <ul>
                             {navitems.map((item, index) => (
-                                <li key={index} className='py-1 cursior-pointer '>
-                                    <a href={item.link}>{item.name}</a>
+                                <li key={index} className='py-1'>
+                                    <a  className='cursor-pointer' href={item.link}>{item.name}</a>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <div className='information md:w-1/4 px-6 '>
+                    <div className='services md:w-1/4 px-6 '>
                         <h1 className='font-bold text-xl py-2'>Customer Services </h1>
                         <ul>
                             {serviesitems.map((item, index) => (
-                                <li key={index} className='py-1 cursior-pointer '>
-                                    <a href={item.link}>{item.name}</a>
+                                <li key={index} className='py-1'>
+                                    <a  className='py-1 cursor-pointer' href={item.link}>{item.name}</a>
                                 </li>
                             ))}
                         </ul>
@@ -126,9 +126,9 @@ const Footer = () => {
                             <input className='outline-none w-68 px-4' type="text" placeholder='your email address' /><button className='text-white bg-black py-2 px-4 cursor-pointer'>subscribe</button>
                         </div>
                         <div className=' icons flex gap-4 items-center py-4'>
-                            <FaFacebookF size={25} />
-                            <FaInstagram size={25} />
-                            <FaYoutube size={25} />
+                            <FaFacebookF size={25} className='cursor-pointer' />
+                            <FaInstagram size={25} className='cursor-pointer'/>
+                            <FaYoutube size={25} className='cursor-pointer'/>
                         </div>
                     </div>
                 </div>
@@ -141,10 +141,10 @@ const Footer = () => {
                         {isOpencontact && (
                             <div className='flex flex-col space-y-4'>
                                 <div className='flex gap-2 items-center'>
-                                    <SlLocationPin size={25} />   <p> 21 Km Ferozpur Road Lahore Pakistan.</p>
+                                    <SlLocationPin size={25} /> <p> 21 Km Ferozpur Road Lahore Pakistan.</p>
                                 </div>
                                 <div className='flex gap-2 items-center'>
-                                    <TfiEmail size={20} />     <p>nishatonline@nishatmills.com</p>
+                                    <TfiEmail size={20} />  <p>nishatonline@nishatmills.com</p>
                                 </div>
                                 <div className='flex gap-2 items-center'>
                                     <FiPhone size={20} /> <p>+92 42 111 647 428</p>
@@ -159,8 +159,8 @@ const Footer = () => {
                         {isOpeninfo && (
                             <ul>
                                 {navitems.map((item, index) => (
-                                    <li key={index} className='py-1 cursior-pointer '>
-                                        <a href={item.link}>{item.name}</a>
+                                    <li key={index} className='py-1'>
+                                        <a  className=' cursor-pointer' href={item.link}>{item.name}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -173,8 +173,8 @@ const Footer = () => {
                         {isOpenservies && (
                             <ul>
                                 {serviesitems.map((item, index) => (
-                                    <li key={index} className='py-1 cursior-pointer '>
-                                        <a href={item.link}>{item.name}</a>
+                                    <li key={index} className='py-1'>
+                                        <a  className='py-1 cursor-pointer' href={item.link}>{item.name}</a>
                                     </li>
                                 ))}
                             </ul>)}
@@ -191,9 +191,9 @@ const Footer = () => {
                                     <input className='outline-none w-68 px-4 text-center' type="text" placeholder='your email address' /><button className='text-white bg-black py-2 px-4 cursor-pointer'>subscribe</button>
                                 </div>
                                 <div className=' icons flex gap-4 items-center py-4'>
-                                    <FaFacebookF size={25} />
-                                    <FaInstagram size={25} />
-                                    <FaYoutube size={25} />
+                                    <FaFacebookF size={25} className='cursor-pointer' />
+                                    <FaInstagram size={25} className='cursor-pointer'/>
+                                    <FaYoutube size={25} className='cursor-pointer'/>
                                 </div>
                             </div>
                         )}
@@ -202,7 +202,8 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <div className='pb-6 flex flex-col md:flex-row justify-between items-center w-full text-sm md:px-10'>
+                {/* bottom footer  */}
+                <div className='md:pb-6 flex flex-col md:flex-row justify-between items-center w-full text-sm md:px-10'>
                     <p>Copyright © 2025 Nishat. All rights reserved. </p>
                     <div>
                         <div className='flex gap-4 items-center py-4 md:pr-32'>
