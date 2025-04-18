@@ -7,14 +7,14 @@ const Category = () => {
         <div className='p-2 flex items-center justify-center '>
           <h1 className='font-semibold text-center text-2xl border-b border-[#D9D9D9]'>SHOP BY CATEGORY</h1>
         </div>
-        <div className='flex w-full h-screen flex flex-wrap md:flex-nowrap'>
+        <div className='w-full lg:h-screen flex flex-wrap md:flex-nowrap'>
           <div className='left md:w-1/2 w-full md:relative'>
             <div >
               <img className='w-full pr-1' src="/img1c.webp" alt="" />
               <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500 ' >UNSTITCHED</h2>
             </div>
 
-            <div className='md:absolute md:-bottom-98 '>
+            <div className='md:absolute md:-bottom-98 hidden md:flex '>
               <div className='flex gap-1'>
                 <div>
                   <img className='h-68 w-77' src="/img5c.avif" alt="" />
@@ -27,7 +27,7 @@ const Category = () => {
               </div>
             </div>
           </div>
-          {/* <div className='right md:w-1/2 w-full z-50'>
+          <div className='right md:w-1/2 w-full'>
             <div className='flex gap-1 '>
               <div>
                 <img className='h-68 w-77' src="/img2c.avif" alt="" />
@@ -44,11 +44,23 @@ const Category = () => {
                 <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500'>PRET</h2>
               </div>
             </div>
-          </div> */}
+            <div className='md:absolute md:-bottom-98 flex '>
+              <div className='flex gap-1 md:hidden flex'>
+                <div>
+                  <img className='h-68 w-77' src="/img5c.avif" alt="" />
+                  <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500'>MEN</h2>
+                </div>
+                <div>
+                  <img className='h-68 w-79' src="/img6c.avif" alt="" />
+                  <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500'>FREEDOM TO BUY</h2>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className='flex flex-wrap pt-16 md:pt-0'>
+      <div className='flex flex-wrap'>
         <div className='md:w-1/2'>
           <div className='flex gap-1'>
             <div>

@@ -83,7 +83,7 @@ const Footer = () => {
     };
     return (
         <>
-            <div className='footer bg-[#F6F6F8] py-6'>
+            <div className='footer bg-[#F6F6F8] py-4'>
                 <div className='flex hidden md:flex flex-col md:flex-row w-full px-4'>
                     <div className='contact  md:w-1/4 px-4 '>
                         <h1 className='font-bold text-xl py-2'> Contact us</h1>

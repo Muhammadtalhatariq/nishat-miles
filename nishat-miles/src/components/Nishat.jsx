@@ -96,7 +96,7 @@ const Nishat = () => {
                                 showDots
                             >
                                 {nishatItems.map((item) => (
-                                    <div className='p-4 '>
+                                    <div className='px-4 py-6 '>
                                         <div className='flex items-center py-4' >
                                             <div
                                                 className='rounded-full p-1 size-10'
@@ -115,6 +115,7 @@ const Nishat = () => {
 
                             </Carousel>
                         </div>
+
                         <div className='md:pt-8 pt-6 md:flex hidden flex-weap'>
                             <Carousel
                                 additionalTransfrom={0}
