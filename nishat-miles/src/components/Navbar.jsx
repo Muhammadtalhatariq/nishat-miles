@@ -32,12 +32,12 @@ const nevItems = [
 const Navbar = () => {
   return (
     <>
-      <div className='flex items-center justify-center'>
+      <div className='flex items-center justify-center w-full my-2'>
         <div>
-          <ul className="hidden md:flex list-none gap-5">
+          <ul className="hidden md:flex list-none gap-5 py-1">
             {nevItems.map((item) => (
               <li
-                className="hover:text-[#D9D9D9] font-medium py-4 cursor-pointer px-3"
+                className="hover:text-[#D9D9D9] font-medium cursor-pointer px-3"
                 key={item.path}
               >
                 <a to={item.path}>{item.name}</a>

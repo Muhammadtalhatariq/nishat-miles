@@ -11,7 +11,7 @@ const Category = () => {
           <div className='left md:w-1/2 w-full md:relative'>
             <div >
               <img className='w-full pr-1' src="/img1c.webp" alt="" />
-              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500'>UNSTITCHED</h2>
+              <h2 className='text-center p-2 hover:bg-[#DCB95F] duration-500 font-medium hover:text-white duration-500 ' >UNSTITCHED</h2>
             </div>
 
             <div className='md:absolute md:-bottom-98 '>

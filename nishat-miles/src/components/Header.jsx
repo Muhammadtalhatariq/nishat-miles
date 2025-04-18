@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { TfiSearch } from "react-icons/tfi";
@@ -12,6 +13,7 @@ import { CiShoppingTag } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 import { FiPhone } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
+
 const nevItems = [
     {
         name: "WOMEN",
@@ -68,13 +70,12 @@ const Header = () => {
 
             <TopHeader />
             <div>
-                <div className={`flex items-center md:flex-col justify-between  p-4 z-80 ${stick ? "fixed top-0" : ""} bg-white w-full `}>
+                <div className={`flex items-center md:flex-col justify-between p-2 z-80 ${stick ? "fixed top-0" : ""} bg-white w-full `}>
                     {/* mobile view  */}
                     <div className='mbl-nav relative '>
                         <div>
-                        <HiOutlineMenuAlt1 onClick={handleToggle} size={30} className='text-black text-2xl md:hidden' />
+                            <HiOutlineMenuAlt1 onClick={handleToggle} size={30} className='text-black text-2xl md:hidden' />
                         </div>
-                       
                         {isOpen && (
                             <div className='w-80 absolute fixed bg-white -top-24 -left-0 bottom-0 z-50 flex flex-col items-center justify-center'>
                                 <div className='flex items-center justify-between w-full'>
@@ -121,11 +122,10 @@ const Header = () => {
                     </div>
 
                     <div className='flex items-center justify-between w-full px-2 '>
-                        <div className='w-1/2 flex items-center justify-end'>
-                            <div className='md:pl-60 pl-10'>
-                                <img className='h-10 cursor-pointer' src="/logo.webp" alt="" />
+                        <div className='md:w-1/2 flex items-center justify-end md:ml-20 ml-10'>
+                            <div className='md:pl-64 pl-10 '>
+                                <img className='h-10 cursor-pointer' src="/logo.webp" alt="logo" />
                             </div>
-
                         </div>
                         <div className='icons flex items-center justify-between md:px-3 px-3 gap-3'>
                             <TfiSearch className='text-black  hover:text-[#78909C] text-xl hover:text-2xl duration-500 cursor-pointer' />
@@ -138,9 +138,15 @@ const Header = () => {
                         </div>
                     </div>
                     <div className='border-b hidden md:flex w-full border-[#D9D9D9] mx-4 pt-4'></div>
+                    <div className='hidden md:flex'>
                     <Navbar />
+                    </div>
+                    
                 </div>
-             
+                <div>
+                    
+                </div>
+              
                 <div>
                 </div>
 

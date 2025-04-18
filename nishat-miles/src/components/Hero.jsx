@@ -32,27 +32,27 @@ const cartItems = [
     {
         id: 1,
         image: "/img1s.webp",
-        title: "Fashion Freedom",
+        title: "Shop By Concept",
     },
     {
         id: 2,
         image: "/img2s.webp",
-        title: "Fashion Freedom",
+        title: "Sunlit Styles",
     },
     {
         id: 3,
         image: "/img3s.webp",
-        title: "Fashion Freedom",
+        title: "Ammi Aur Mei",
     },
     {
         id: 4,
         image: "/img4s.webp",
-        title: "Fashion Freedom",
+        title: "Summer Pret Picks",
     },
     {
         id: 5,
         image: "/img5s.webp",
-        title: "Fashion Freedom",
+        title: "Summer Dream Luxury Pret ",
     },
     {
         id: 6,
@@ -62,22 +62,22 @@ const cartItems = [
     {
         id: 7,
         image: "/img7s.webp",
-        title: "Fashion Freedom",
+        title: "Summer Unstitched Looks",
     },
     {
         id: 8,
         image: "/img8s.webp",
-        title: "Fashion Freedom",
+        title: "Luxury Unstitched",
     },
     {
         id: 9,
         image: "/img9s.jpg",
-        title: "Fashion Freedom",
+        title: " Men's Summer Wardrobe",
     },
     {
         id: 10,
         image: "/img10s.webp",
-        title: "Fashion Freedom",
+        title: "Wardrobe Add-ons",
     },
 ]
 
@@ -205,13 +205,13 @@ const Hero = () => {
                 >
 
                     {cartItems.map((item) => (
-                        <div>
+                        <div className='flex flex-col items-center justify-center' key={item.id}>
                             <img
                                 key={item.id}
                                 className='cursor-pointer border border-[#D9D9D9] rounded-full p-1 md:h-48 md:w-48 h-28 w-28'
                                 src={item.image}
                                 style={{
-                                    display: 'block',
+                                    display:'block',
                                 }}
                             />
                             <p className='text-center py-4 mb-4'>{item.title}</p>
