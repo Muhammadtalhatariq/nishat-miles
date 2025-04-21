@@ -70,7 +70,7 @@ const Header = () => {
 
             <TopHeader />
 
-            <div className={`flex items-center md:flex-col justify-between p-2 z-80 ${stick ? "fixed top-0 duration-500 ease-in" : ""} bg-white w-full `}>
+            <div className={`flex items-center font-mont md:flex-col justify-between p-2 z-80 ${stick ? "fixed top-0 duration-500 ease-in" : ""} bg-white w-full `}>
                 {/* mobile view  */}
                 <div className='mbl-nav relative '>
                     <div>
@@ -87,7 +87,7 @@ const Header = () => {
                                 </div>
                             </div>
                             <div className='Flex flex-row justify-between items-center w-full bg-white'>
-                                <div className='flex items-center justify-between border-b border-[#D9D9D9]'>
+                                <div className='flex items-center justify-between border-b border-[#D9D9D9] hover:bg-[#CCCCCC]'>
                                     <div className='flex gap-2 items-center px-2 py-4'>  ,
                                         <CiShoppingTag size={20} />
                                         <a href="#">NEW IN</a>

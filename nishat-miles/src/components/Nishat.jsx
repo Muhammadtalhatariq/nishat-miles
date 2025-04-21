@@ -11,7 +11,7 @@ const nishatItems = [
         id: 1,
         image: <GrSupport size={30} />,
         title: "Track Your Order",
-        dest: "Click here to find your nearby"
+        dest: "Click here to find your nearby store"
     },
     {
         id: 2,
@@ -37,7 +37,7 @@ const Nishat = () => {
     return (
         <>
             <div>
-                <div className='py-4  '>
+                <div className='py-4 font-mont '>
                     <div className=''>
                         {/* heading  */}
                         <div className='flex items-center justify-center gap-2'>
@@ -161,16 +161,15 @@ const Nishat = () => {
                             >
                                 {nishatItems.map((item) => (
                                     <div className='px-4'>
-                                        <div className='flex items-center justify-center pt-8' >
-                                            <div
-                                                className='flex items-center justify-center size-16'>
-                                                <div className=' mb-6 '>
+                                        <div className='flex items-center justify-center pt-8 pb-4' >
+                                            <div className='flex items-center justify-center size-16'>
+                                                <div className=' mb-6 text-[#8F8F8F]'>
                                                     {item.image}
                                                 </div>
                                             </div>
                                             <div>
                                                 <h2 className='font-semibold'>{item.title}</h2>
-                                                <a className='text-center'>{item.dest}</a>
+                                                <a className='text-center text-[#8F8F8F]'>{item.dest}</a>
                                             </div>
                                         </div>
                                     </div>

@@ -57,7 +57,7 @@ const cartItems = [
 const Smallslider = () => {
     return (
         <>
-            <div className='py-4 '>
+            <div className='py-4 font-mont'>
                 <Carousel
                     additionalTransfrom={0}
                     arrows={false}
@@ -120,7 +120,7 @@ const Smallslider = () => {
                                     display: 'block',
                                 }}
                             />
-                            <p className='text-center py-4 mb-4'>{item.title}</p>
+                            <p className='text-center py-4 mb-4 text-sm font-medium'>{item.title}</p>
                         </div>
 
                     ))}

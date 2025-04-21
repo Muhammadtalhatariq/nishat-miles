@@ -7,6 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
+
 const navitems = [
     {
         name: "Blog",
@@ -83,7 +84,7 @@ const Footer = () => {
     };
     return (
         <>
-            <div className='footer bg-[#F6F6F8] py-4'>
+            <div className='footer bg-[#F6F6F8] font-mont py-4'>
                 <div className='flex hidden md:flex flex-col md:flex-row w-full px-4'>
                     <div className='contact  md:w-1/4 px-4 '>
                         <h1 className='font-bold text-xl py-2'> Contact us</h1>
@@ -139,7 +140,7 @@ const Footer = () => {
                             <h1 className='font-bold text-xl py-2'> Get In Touch</h1>  <span> {isOpencontact ? <FiMinus onClick={handleClosecontact} /> : <GoPlus onClick={handleOpencontact} />} </span>
                         </div>
                         {isOpencontact && (
-                            <div className='flex flex-col space-y-4'>
+                            <div className='flex flex-col space-y-6 pt-2 py-6'>
                                 <div className='flex gap-2 items-center'>
                                     <SlLocationPin size={25} /> <p> 21 Km Ferozpur Road Lahore Pakistan.</p>
                                 </div>
@@ -157,7 +158,7 @@ const Footer = () => {
                             <h1 className='font-bold text-xl py-2'>Information </h1>  <span> {isOpeninfo ? <FiMinus onClick={handleCloseinfo} /> : <GoPlus onClick={handleOpeninfo} />} </span>
                         </div>
                         {isOpeninfo && (
-                            <ul>
+                            <ul className='pt-2 py-6'>
                                 {navitems.map((item, index) => (
                                     <li key={index} className='py-1'>
                                         <a  className=' cursor-pointer' href={item.link}>{item.name}</a>
@@ -171,7 +172,7 @@ const Footer = () => {
                             <h1 className='font-bold text-xl py-2'>Customer Services </h1>  <span> {isOpenservies ? <FiMinus onClick={handleCloseservices} /> : <GoPlus onClick={handleOpenservices} />} </span>
                         </div>
                         {isOpenservies && (
-                            <ul>
+                            <ul className='pt-2 py-6'>
                                 {serviesitems.map((item, index) => (
                                     <li key={index} className='py-1'>
                                         <a  className='py-1 cursor-pointer' href={item.link}>{item.name}</a>
@@ -201,10 +202,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div>
                 {/* bottom footer  */}
                 <div className='md:pb-6 flex flex-col md:flex-row justify-between items-center w-full text-sm md:px-10'>
-                    <p>Copyright © 2025 Nishat. All rights reserved. </p>
+                    <p className=' text-[#8F8F8F]'>Copyright © 2025 Nishat. All rights reserved. </p>
                     <div>
                         <div className='flex gap-4 items-center py-4 md:pr-32'>
                             <img src="/ft-icon.svg" alt="" />
@@ -212,7 +212,6 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </>
     )
 }
